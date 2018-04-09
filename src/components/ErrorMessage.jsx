@@ -4,7 +4,7 @@ const ErrorMessage = ({ errorMessage, clearError }) => {
     if (errorMessage) {
         return (
             <div>
-                <p>{errorMessage}</p>
+                <p className="error">{errorMessage}</p>
                 <button onClick={clearError}>Got it</button>
             </div>
         );

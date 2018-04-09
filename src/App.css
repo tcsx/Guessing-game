@@ -43,10 +43,8 @@ li:nth-child(odd) div{
   background-color: rgb(219, 253, 204);
 }
 
-p.message {
-  display: inline-block;
-  width: 400px;
-  height: 50px;
+p.error {
+  color: red
 }
 
 
