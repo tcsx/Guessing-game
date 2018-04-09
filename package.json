@@ -11,8 +11,10 @@
     "concurrently": "^3.5.1"
   },
   "scripts": {
-    "start": "concurrently \"nodemon index\" \"react-scripts start\"",
+    "start": "node index",
+    "dev": "concurrently \"nodemon index\" \"react-scripts start\"",
     "build": "react-scripts build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
