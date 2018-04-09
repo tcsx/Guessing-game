@@ -1,0 +1,58 @@
+body {
+  background-color: cornsilk;
+  min-width: 800px;
+}
+
+div {
+  text-align: center;
+}
+
+.player {
+  font-size: X-large;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.guess-column {
+  vertical-align: top;
+  display: inline-block;
+  list-style: none;
+  width: 400px;
+}
+
+button.game-controller {
+  font-size: x-large;
+  text-transform: capitalize;
+}
+
+.guess-list div {
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+}
+
+
+
+.instruction div {
+  margin: 20px 0px;
+  display: inline-block;
+  width:200px;
+}
+
+li:nth-child(odd) div{
+  background-color: rgb(219, 253, 204);
+}
+
+p.message {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+}
+
+
+.winner {
+  color: red;
+  font-size: X-large;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
