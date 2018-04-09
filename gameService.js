@@ -18,7 +18,7 @@ function selectWordAndGameId() {
     gameInfoMap.set(id, {
         secretWord,
         guessList: [],
-        selectionSet: new Set(wordList),
+        selectionList: [...wordList],
         startTime: null,
         lastActTime: null
     });
@@ -41,8 +41,8 @@ function getGuessListByGameId(gameId) {
     return gameInfoMap.get(gameId).guessList;
 }
 
-function getSelectionSetByGameId(gameId) {
-    return gameInfoMap.get(gameId).selectionSet;
+function getSelectionListByGameId(gameId) {
+    return gameInfoMap.get(gameId).selectionList;
 }
 
 function countCommonLetters(baseWord, guessWord) {
@@ -63,17 +63,11 @@ function countCommonLetters(baseWord, guessWord) {
 
 function pickGuess(gameId, commonLetters) {
     const guessList = getGuessListByGameId(gameId);
-    const selectionSet = getSelectionSetByGameId(gameId);
     if (guessList.length > 0) {
         const lastGuess = guessList[guessList.length - 1];
-        selectionSet.delete(lastGuess);
-        selectionSet.forEach(word => {
-            if (countCommonLetters(lastGuess, word) !== commonLetters) {
-                selectionSet.delete(word);
-            }
-        });
+        gameInfoMap.get(gameId).selectionList = getSelectionListByGameId(gameId).filter(word => countCommonLetters(lastGuess, word) === commonLetters && word !== lastGuess);
     }
-    const guess = pickRandomWord([...selectionSet]);
+    const guess = pickRandomWord(getSelectionListByGameId(gameId));
     guessList.push(guess);
     return guess;
 }
