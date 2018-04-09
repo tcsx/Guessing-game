@@ -1,4 +1,4 @@
-const wordList = require('./wordList');
+const wordList = require('./wordlist');
 const gameInfoMap = new Map();
 
 function pickRandomWord(list = wordList) {
