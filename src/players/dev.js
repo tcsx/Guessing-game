@@ -1,4 +1,4 @@
 module.exports = {
-    clfred: "http://localhost:8080",
-    darbara: "http://localhost:8888"
+    alfred: "http://localhost:8080",
+    barbara: "http://localhost:8888"
 };
