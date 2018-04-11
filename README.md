@@ -8,3 +8,6 @@ which will respond with the number of matching letters (regardless of position) 
 * The server that responded with the number of matches will then be asked for it's guess, and the server that had made the previous guess will then be asked to score the new guess, and so forth, alternating turns.
 * When a winner is determined, each server is informed the game is over, and the winner is shown on the page. 
 * The user is given the option to start a new game. Doing so will clear the previous guesses.
+
+## Demo
+![Demo image](./demo.png)
