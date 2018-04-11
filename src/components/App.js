@@ -6,7 +6,7 @@ import Button from './Button';
 import ErrorMessage from "./ErrorMessage";
 import { fetchSecretWordAndGameId, fetchGuessResult, fetchNewGuess, deleteGame } from "../services/fetchService";
 import { asyncForEach } from "../services/asyncHelper";
-import domains from '../players/players';
+import domains from '../config.json';
 
 
 class App extends Component {

@@ -7,11 +7,11 @@
     "express": "^4.16.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.4",
+    "concurrently": "^3.5.1"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "concurrently \"nodemon index\" \"react-scripts start\"",
+    "start": "concurrently \"node index\" \"react-scripts start\"",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
     "test": "react-scripts test --env=jsdom",
